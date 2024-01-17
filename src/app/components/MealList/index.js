@@ -35,14 +35,14 @@ export default function MealList({meals, slug}) {
       setDebouncedInput(query);
     }, 500);
     return () => clearTimeout(timeoutId);
-  }, [query, 500]);
+  }, [query]);
 
   useEffect(() => {
     setFilteredMeals(
       meals.filter((meal) => meal.strMeal.toLowerCase().includes(debouncedInput.toLowerCase()))
     );
     setCurrentPage(0);
-  }, [debouncedInput]);
+  }, [debouncedInput, meals]);
 
   return(
     <>
@@ -67,7 +67,7 @@ export default function MealList({meals, slug}) {
                   />
                 </div>
               )
-          : <p className="text-lg">Sorry, we can't provide your Meal</p>
+          : <p className="text-lg">Sorry, we can&apos;t provide your Meal</p>
         }
       </div>
       {

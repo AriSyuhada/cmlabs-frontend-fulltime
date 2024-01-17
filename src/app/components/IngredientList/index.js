@@ -35,14 +35,14 @@ export default function IngredientList({ingredients}) {
       setDebouncedInput(query);
     }, 500);
     return () => clearTimeout(timeoutId);
-  }, [query, 500]);
+  }, [query]);
 
   useEffect(() => {
     setFilteredIngredient(
       ingredients.filter((ingredient) => ingredient.strIngredient.toLowerCase().includes(debouncedInput.toLowerCase()))
     );
     setCurrentPage(0);
-  }, [debouncedInput]);
+  }, [debouncedInput, ingredients]);
 
   return (
     <>
@@ -64,7 +64,7 @@ export default function IngredientList({ingredients}) {
                   />
                 </div>
               )
-          : <p className="text-lg">Sorry, we can't provide your Ingredient</p>
+          : <p className="text-lg">Sorry, we can&apos;t provide your Ingredient</p>
         }
       </div>
       {
