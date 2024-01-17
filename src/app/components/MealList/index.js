@@ -22,7 +22,7 @@ export default function MealList({meals, slug}) {
   }
 
   const handleNextPage = (number) => {
-    if (currentPage !== Math.ceil(filteredIngredient.length / itemsPerPage) - 1) {
+    if (currentPage !== Math.ceil(filteredMeals.length / itemsPerPage) - 1) {
       setCurrentPage((prevCurrentPage) => prevCurrentPage + 1);
     }
   }
@@ -77,7 +77,7 @@ export default function MealList({meals, slug}) {
             <Pagination 
               currentPage={currentPage}
               itemsPerPage={itemsPerPage}
-              totalItems={filteredIngredient.length}
+              totalItems={filteredMeals.length}
               paginate={handlePaginate}
               next={handleNextPage}
               prev={handlePrevPage}
