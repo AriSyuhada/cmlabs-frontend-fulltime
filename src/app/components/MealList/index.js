@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import MealWrapper from "../MealWrapper";
+import Pagination from "../Pagination";
 
 export default function MealList({meals, slug}) {
   const [query, setQuery] = useState('');
