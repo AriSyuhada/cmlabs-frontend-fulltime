@@ -2,7 +2,23 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+Before everything else:
+
+1. Clone this repository
+```
+git clone
+```
+2. Open it using VSCode
+3. Open new Terminal or using this command:
+```
+ctrl + shift + `
+```
+4. Run this on terminal
+```bash
+npm install
+```
+
+To run the development server:
 
 ```bash
 npm run dev
