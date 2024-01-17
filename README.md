@@ -1,5 +1,9 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Website Demo
+
+You can access the app demo using vercel platform using this [link](https://cmlabs-frontend-fulltime.vercel.app/).
+
 ## Getting Started
 
 Before everything else:
