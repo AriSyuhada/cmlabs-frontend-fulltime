@@ -40,7 +40,11 @@ export default function MealList({meals, slug}) {
 
   useEffect(() => {
     setFilteredMeals(
-      meals.filter((meal) => meal.strMeal.toLowerCase().includes(debouncedInput.toLowerCase()))
+      meals && meals.length > 0 
+      ?
+        meals.filter((meal) => meal.strMeal.toLowerCase().includes(debouncedInput.toLowerCase()))
+      :
+        []
     );
     setCurrentPage(0);
   }, [debouncedInput, meals]);
